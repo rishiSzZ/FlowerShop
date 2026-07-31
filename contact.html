@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ferns & Petals - Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Ferns & Petals</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart
+        <span id="cartCount">0</span></a></li>
+      </ul>
+      <div class="location-box">
+        <div class="location-text" style="display: flex; align-items: center; gap: 8px;">
+          <span class="location-icon">📍</span>
+          <small><b>Delivering in</b></small>
+          <p style="margin: 0;"><b>Jaipur</b></p>
+        </div>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+  <!-- Contact Form -->
+  <section class="contact-section">
+    <h1>Contact Us</h1>
+    <form id="contactForm" onsubmit="return validateForm()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name">
+        <span class="error-msg" id="nameError"></span>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" id="email">
+        <span class="error-msg" id="emailError"></span>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone (optional)</label>
+        <input type="text" id="phone">
+        <span class="error-msg" id="phoneError"></span>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" rows="5"></textarea>
+        <span class="error-msg" id="messageError"></span>
+      </div>
+      <button type="submit">Send Message</button>
+      <p class="success-msg" id="formSuccess"></p>
+    </form>
+  </section>
+  <!-- Contact Info -->
+  <section class="contact-info" style="justify-content: center; align-items: center; text-align: center;">
+    <h2>Visit Us:</h2>
+    <p>SKIT, Ram Nagariya, Jagatpura, Jaipur, Rajasthan</p>
+    <p>Phone: +91-9876543210</p>
+    <p>Email: b250840@skit.ac.in</p>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Ferns & Petals | All Rights Reserved</p>
+    <p>Contact: b250840@skit.ac.in | Jaipur, Rajasthan</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

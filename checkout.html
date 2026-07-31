@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Ferns & Petals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+      <header>
+    <nav class="navbar">
+      <div class="logo">Ferns & Petals</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart
+        <span id="cartCount">0</span></a></li>
+      </ul>
+      <div class="location-box">
+    <span class="location-icon">📍</span>
+    <small><b>Delivering in</b></small>
+    <span><b>Jaipur</b></span>
+</div>
+    </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+    <!-- Checkout -->
+    <section class="checkout-container">
+        <!-- Left Side -->
+        <div class="checkout-left">
+            <h2>Delivery Details</h2>
+            <form id="checkoutForm">
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Full Name"
+                    required>
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Phone Number"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    required>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                    required>
+                <textarea
+                    id="address"
+                    placeholder="Delivery Address"
+                    required></textarea>
+                <input
+                    type="text"
+                    id="city"
+                    placeholder="City"
+                    required>
+                <input
+                    type="text"
+                    id="pincode"
+                    placeholder="Pincode"
+                    pattern="[0-9]{6}"
+                    maxlength="6"
+                    required>
+            </form>
+        </div>
+        <!-- Right Side -->
+        <div class="checkout-right">
+            <h2>Payment</h2>
+            <label>
+                <input
+                    type="radio"
+                    name="payment"
+                    value="Cash on Delivery"
+                    checked>
+                Cash on Delivery
+            </label>
+            <label>
+                <input
+                    type="radio"
+                    name="payment"
+                    value="UPI">
+                UPI
+            </label>
+            <label>
+                <input
+                    type="radio"
+                    name="payment"
+                    value="Credit / Debit Card">
+                Credit / Debit Card
+            </label>
+            <h2>Order Summary</h2>
+            <div id="checkoutItems">
+            </div>
+            <h3>
+                Total :
+                ₹<span id="checkoutTotal">0</span>
+            </h3>
+            <button
+                type="button"
+                onclick="placeOrder()">
+                Place Order
+            </button>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
