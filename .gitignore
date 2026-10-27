@@ -1,0 +1,9 @@
+# Local database credentials
+php/db.php
+
+# Environment variables
+.env
+
+# Editor and operating system files
+.vscode/
+.DS_Store
